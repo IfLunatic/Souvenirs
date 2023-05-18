@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Ardesto Animals",
+    "dateOfRelease": "2023-05-19",
+    "price": 10.0,
+    "manufacturer": {
+      "name": "Ardesto",
+      "country": "Switzerland"
+    },
+    "type": "Cup"
+  },
+  {
+    "name": "Blitzing",
+    "dateOfRelease": "2023-05-19",
+    "price": 20.0,
+    "manufacturer": {
+      "name": "Under Armour",
+      "country": "USA"
+    },
+    "type": "Cap"
+  },
+  {
+    "name": "Atomic",
+    "dateOfRelease": "2022-05-03",
+    "price": 4.12,
+    "manufacturer": {
+      "name": "Roly",
+      "country": "Bangladesh"
+    },
+    "type": "TShirt"
+  }
+]
