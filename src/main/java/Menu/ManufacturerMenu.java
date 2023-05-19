@@ -28,6 +28,7 @@ public class ManufacturerMenu {
 
     protected static void normalViewManufacturer(List<Manufacturer> manufacturers) {
         for (Manufacturer manufacturer : manufacturers) {
+            System.out.println("<----------------------------------------------->");
             System.out.println("Manufacturer name: " + manufacturer.getName());
             System.out.println("Manufacturer country: " + manufacturer.getCountry());
         }

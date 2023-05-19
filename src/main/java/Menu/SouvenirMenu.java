@@ -41,19 +41,19 @@ public class SouvenirMenu {
 
 
 //    Implementation of methods for adding a souvenir
-    static void addSouvenir() {
-        String name = getSouvenirName().trim();
-        LocalDate date = getSouvenirDate();
-        double price = getSouvenirPrice();
-        Manufacturer manufacturer = getManufacturer();
-        String type = getSouvenirType();
-        Souvenir souvenir = createSouvenir(name, date, price, manufacturer, type);
-        if (souvenir != null) {
-            souvenirs.add(souvenir);
-            System.out.println("Souvenir added successfully!");
-        }
-            SouvenirSerializer.serializeSouvenirs();
+static void addSouvenir() {
+    String name = getSouvenirName().trim();
+    LocalDate date = getSouvenirDate();
+    double price = getSouvenirPrice();
+    Manufacturer manufacturer = getManufacturer();
+    String type = getSouvenirType();
+    Souvenir souvenir = createSouvenir(name, date, price, manufacturer, type);
+    if (souvenir != null) {
+        souvenirs.add(souvenir);
+        System.out.println("Souvenir added successfully!");
     }
+    SouvenirSerializer.serializeSouvenirs();
+}
 
     private static String getSouvenirName() {
         Scanner scanner = new Scanner(System.in);
@@ -115,7 +115,6 @@ public class SouvenirMenu {
         }
         return souvenir;
     }
-
     // We implement methods for changing a souvenir
     protected static void editSouvenir() {
         normalViewSouvenir(souvenirs);

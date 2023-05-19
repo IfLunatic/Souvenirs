@@ -17,7 +17,7 @@ public class Menu {
 
     private static final Scanner scanner = new Scanner(System.in);
     private static int choice;
-    public static List<Manufacturer> manufacturers = new ArrayList<>();
+    public static Set<Manufacturer> manufacturers = new HashSet<>();
     public static List<Souvenir> souvenirs = new ArrayList<>();
 
     public static void menu() {

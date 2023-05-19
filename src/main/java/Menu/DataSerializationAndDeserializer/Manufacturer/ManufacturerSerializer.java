@@ -4,7 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
+import java.util.Set;
+
 import Manufacturer.Manufacturer;
 
 import com.google.gson.Gson;
@@ -25,11 +26,11 @@ public class ManufacturerSerializer {
         }
     }
 
-    public static List<Manufacturer> deserializeManufacturers() {
+    public static Set<Manufacturer> deserializeManufacturers() {
 
         try (BufferedReader reader = new BufferedReader(new FileReader("manufacturers.json"))) {
             Gson gson = new Gson();
-            manufacturers = gson.fromJson(reader, new TypeToken<List<Manufacturer>>(){}.getType());
+            manufacturers = gson.fromJson(reader, new TypeToken<Set<Manufacturer>>(){}.getType());
         } catch (IOException | JsonSyntaxException e) {
             e.printStackTrace();
         }

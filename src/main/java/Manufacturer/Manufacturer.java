@@ -1,6 +1,7 @@
 package Manufacturer;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Manufacturer implements Serializable {
     private String name;
@@ -33,5 +34,18 @@ public class Manufacturer implements Serializable {
                 "name='" + name + '\'' +
                 ", country='" + country + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Manufacturer that = (Manufacturer) o;
+        return Objects.equals(name, that.name) && Objects.equals(country, that.country);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, country);
     }
 }
